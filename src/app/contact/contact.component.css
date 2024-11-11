@@ -1,0 +1,63 @@
+.contact-container {
+    background-color: #ff5630; /* Cor de fundo */
+    color: #ffffff; /* Cor do texto */
+    padding: 20px;
+    border-radius: 15px; /* Bordas arredondadas */
+    max-width: 600px;
+    margin: 20px auto; /* Centraliza o quadro */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  
+  .contact-container h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .contact-container p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .contact-form label {
+    font-size: 14px;
+    text-align: left;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 86, 48, 0.5); /* Sombra laranja */
+  }
+  
+  .contact-form button {
+    background-color: #ffffff; /* Fundo do botão */
+    color: #ff5630; /* Cor do texto no botão */
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact-form button:hover {
+    background-color: #ffe3d9; /* Cor de fundo ao passar o mouse */
+  }
+  

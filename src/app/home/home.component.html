@@ -1,0 +1,11 @@
+<div>
+    <button>Adicionar produto</button>
+    <span>
+        Buscar produto<input>
+    </span>
+</div>
+<section class="results">
+    <div *ngFor="let house of houses">
+        <app-home-card [housingLocation]="house"></app-home-card>
+    </div>
+</section>

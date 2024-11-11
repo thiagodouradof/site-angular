@@ -1,0 +1,41 @@
+.center{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px; /* Espaçamento entre os botões */
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.center a {
+    text-decoration: none;
+    color: #333; /* Cor do texto mais escura para contraste */
+    background-color: #e0e0e0; /* Cor de fundo neutra */
+    padding: 6px 8px;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s; /* Efeito de transição suave */
+}
+
+.center a:hover {
+    background-color: #ff5630; /* Cor de fundo laranja ao passar o mouse */
+    color: #ffffff; /* Torna o texto branco ao passar o mouse */
+}
+
+header {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: #ff5630 solid 5px;
+    margin-bottom: 10px;
+
+    background-image: url("../../assets/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;  
+}
+
+header img {
+    border-radius: 50%;
+    margin-top: 3%;
+}

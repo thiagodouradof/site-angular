@@ -1,0 +1,21 @@
+.about-container {
+    background-color: #ff5630; /* Cor de fundo */
+    color: #ffffff; /* Cor do texto */
+    padding: 20px;
+    border-radius: 15px; /* Bordas arredondadas */
+    max-width: 600px;
+    margin: 20px auto; /* Centraliza o quadro */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  .about-container h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .about-container p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
