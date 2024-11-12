@@ -1,76 +1,115 @@
+/* Estilo geral da página de detalhes do produto */
+article {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
 .listing-photo {
-  height: 600px;
-  width: 50%;
-  object-fit: cover;
-  border-radius: 30px;
-  float: right;
-}
-
-.listing-heading {
-  font-size: 48pt;
-  font-weight: bold;
-  margin-bottom: 15px;
-}
-
-.listing-location::before {
-  content: url("/assets/location-pin.png") / "";
-}
-
-.listing-location {
-  font-size: 24pt;
-  margin-bottom: 15px;
-}
-
-.listing-features > .section-heading {
-  color: var(--secondary-color);
-  font-size: 24pt;
-  margin-bottom: 15px;
-}
-
-.listing-features {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
   margin-bottom: 20px;
 }
 
-.listing-features li {
-  font-size: 14pt;
+.listing-description {
+  margin-bottom: 20px;
 }
 
-li {
-  list-style-type: none;
-}
-
-.listing-apply .section-heading {
-  font-size: 18pt;
-  margin-bottom: 15px;
-}
-
-label,
-input {
-  display: block;
-}
-label {
-  color: var(--secondary-color);
+.listing-heading {
+  font-size: 2rem;
   font-weight: bold;
-  text-transform: uppercase;
-  font-size: 12pt;
-}
-input {
-  font-size: 16pt;
-  margin-bottom: 15px;
-  padding: 10px;
-  width: 400px;
-  border-top: none;
-  border-right: none;
-  border-left: none;
-  border-bottom: solid 0.3px;
-}
-@media (max-width: 1024px) {
-  .listing-photo {
-    width: 100%;
-    height: 400px;
-  }
+  color: #333;
 }
 
-article {
-  padding: 30px 25px 200px;
+.listing-description-text {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 10px;
 }
+
+.listing-price {
+  font-size: 1.2rem;
+  color: #e74c3c;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Estilos para os botões */
+.primary {
+  background-color: #3498db;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.primary:hover {
+  background-color: #2980b9;
+}
+
+.listing-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+/* Estilo para a seção de formulário de edição */
+.listing-edit {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.listing-edit h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+form input {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+form input:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+button.primary {
+  width: 150px;
+  margin: 5px 0;
+  font-size: 1rem;
+}
+
+/* Estilos para campos de formulário desabilitados */
+form input[disabled] {
+  background-color: #f0f0f0;
+  cursor: not-allowed;
+}
+

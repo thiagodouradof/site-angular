@@ -1,12 +1,11 @@
 <section>
-    <img
+  <img
     class="listing-photo"
-    [src]="housingLocation.photo"
-    alt="Exterior photo of {{ housingLocation.name }}"
+    [src]="'assets/' + produto.photo"  
+    alt="Foto do produto {{ produto.nome }}"
   />
-  <h2 class="listing-heading">{{ housingLocation.name }}</h2>
-  <p class="listing-location">
-    {{ housingLocation.city }}, {{ housingLocation.state }}
-  </p>
-  <button mat-flat-button  [routerLink]="['/home-detail/', housingLocation.id]">Learn More</button>
+  <h2 class="listing-heading">{{ produto.nome }}</h2>
+  <p class="listing-description">{{ produto.descricao }}</p>
+  <p class="listing-price">Preço: R$ {{ produto.preco | number: '1.2-2' }}</p>
+  <button mat-flat-button [routerLink]="['/produto-detail/', produto.id]">Saiba mais</button>
 </section>

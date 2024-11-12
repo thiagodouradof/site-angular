@@ -1,11 +1,13 @@
 <div>
-    <button>Adicionar produto</button>
-    <span>
-        Buscar produto<input>
-    </span>
+    <div class="topo">
+        <a [routerLink]="['/criar']">Adicionar produto</a>
+        <span>
+            Buscar produto <input type="text" [(ngModel)]="searchTerm" (keyup)="buscarProduto()">
+          </span>
+    </div>
 </div>
 <section class="results">
-    <div *ngFor="let house of houses">
-        <app-home-card [housingLocation]="house"></app-home-card>
+    <div *ngFor="let produto of produtosFiltrados">
+        <app-home-card [produto]="produto"></app-home-card>
     </div>
 </section>

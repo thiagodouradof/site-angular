@@ -1,27 +1,37 @@
 <article>
-    <img class="listing-photo" [src]="housingLocation.photo" alt="Exterior photo of {{housingLocation.name}}" />
+    <img class="listing-photo" [src]="'assets/' + produtoLocation.photo" alt="Photo of {{produtoLocation.nome}}" />
     <section class="listing-description">
-        <h2 class="listing-heading">{{housingLocation.name}}</h2>
-        <p class="listing-location">{{housingLocation.city}}, {{housingLocation.state}}</p>
+        <h2 class="listing-heading">{{produtoLocation.nome}}</h2>
+        <p class="listing-description-text">{{produtoLocation.descricao}}</p>
+        <p class="listing-price">Preço: R$ {{produtoLocation.preco | number:'1.2-2'}}</p>
     </section>
-    <section class="listing-features">
-        <h2 class="section-heading">About this housing location</h2>
+
+    <!-- Exibindo os botões de ação -->
+    <section class="listing-actions" *ngIf="!isEditing">
+        <button class="primary" (click)="comprar()">Comprar</button>
+        <button class="primary" (click)="editar()">Editar</button>
+        <button class="primary" (click)="deleteProduto()">Excluir</button>
+        <!-- <button class="primary" (click)="cancelar()">Cancelar</button> -->
     </section>
-    <section class="listing-apply">
-        <h2 class="section-heading">Apply now to live here</h2>
-        <form [formGroup]="applyForm" (submit)="submitApplication()">
-            <label for="first-name">First Name</label>
-            <input id="first-name" type="text" formControlName="firstName">
 
-            <label for="last-name">Last Name</label>
-            <input id="last-name" type="text" formControlName="lastName">
+    <!-- Formulário de Edição -->
+    <section class="listing-edit" *ngIf="isEditing">
+        <h2 class="section-heading">Editar Produto</h2>
+        <form [formGroup]="applyForm" (ngSubmit)="submitApplication()">
+            <label for="nome">Nome</label>
+            <input id="nome" type="text" formControlName="nome">
 
-            <label for="email">Email</label>
-            <input id="email" type="email" formControlName="email">
-            <button type="submit" class="primary">Apply now</button>
-            <button type="button" class="secondary" (click)="clearForm()">Clear</button>
-            <button type="button" class="primary">Editar item</button>
-            <button type="button" class="primary">Remover item</button>
+            <label for="descricao">Descrição</label>
+            <input id="descricao" type="text" formControlName="descricao">
+
+            <label for="preco">Preço</label>
+            <input id="preco" type="number" formControlName="preco">
+
+            <label for="photo">URL da Imagem</label>
+            <input id="photo" type="text" formControlName="photo">
+
+            <button type="submit" class="primary">Salvar Alterações</button>
+            <button type="button" class="primary" (click)="cancelar()">Cancelar</button>
         </form>
     </section>
 </article>

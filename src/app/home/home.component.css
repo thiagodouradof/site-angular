@@ -1,52 +1,70 @@
 .results {
-    display: grid;
-    column-gap: 14px;
-    row-gap: 14px;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 400px));
-    margin-top: 50px;
-    justify-content: space-around;
-    margin: auto;
-    min-height: calc(100vh - 263px);
-    padding: 30px 25px 200px;
+  display: grid;
+  column-gap: 14px;
+  row-gap: 14px;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 400px));
+  margin-top: 50px;
+  justify-content: space-around;
+  margin: auto;
+  min-height: calc(100vh - 263px);
+  padding: 30px 25px 200px;
+  flex-grow: 1;
+}
+
+.center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 10px;
+}
+
+input[type="text"] {
+  border: solid 1px var(--primary-color);
+  padding: 10px;
+  border-radius: 8px;
+  margin-right: 4px;
+  display: inline-block;
+  width: 30%;
+}
+
+button {
+  padding: 10px;
+  border: solid 1px var(--primary-color);
+  background: var(--primary-color);
+  color: white;
+  border-radius: 8px;
+}
+
+.topo {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: #333; /* Cor do texto mais escura para contraste */
+  background-color: #e0e0e0; /* Cor de fundo neutra */
+  padding: 6px 8px;
+  border-radius: 20px;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s; /* Efeito de transição suave */
+}
+
+.topo a:hover {
+  background-color: #ff5630; /* Cor de fundo laranja ao passar o mouse */
+  color: #ffffff; /* Torna o texto branco ao passar o mouse */
+}
+
+@media (min-width: 500px) and (max-width: 768px) {
+  .results {
+    grid-template-columns: repeat(2, 1fr);
   }
-  
-  .center {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      padding: 10px;
-  }
-  
   input[type="text"] {
-    border: solid 1px var(--primary-color);
-    padding: 10px;
-    border-radius: 8px;
-    margin-right: 4px;
-    display: inline-block;
-    width: 30%;
+    width: 70%;
   }
-  
-  button {
-    padding: 10px;
-    border: solid 1px var(--primary-color);
-    background: var(--primary-color);
-    color: white;
-    border-radius: 8px;
+}
+
+@media (max-width: 499px) {
+  .results {
+    grid-template-columns: 1fr;
   }
-  
-  @media (min-width: 500px) and (max-width: 768px) {
-    .results {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    input[type="text"] {
-      width: 70%;
-    }
-  }
-  
-  @media (max-width: 499px) {
-    .results {
-      grid-template-columns: 1fr;
-    }
-  }
-  
-  
+}

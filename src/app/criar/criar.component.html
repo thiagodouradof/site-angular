@@ -1,0 +1,32 @@
+<div class="criar-container">
+    <h2>Cadastrar Produto</h2>
+  
+    <form (ngSubmit)="salvarProduto()">
+      <!-- Nome do produto -->
+      <input type="text" [(ngModel)]="novoProduto.nome" name="nome" placeholder="Nome do produto" required>
+  
+      <!-- Descrição do produto -->
+      <input type="text" [(ngModel)]="novoProduto.descricao" name="descricao" placeholder="Descrição" required>
+  
+      <!-- Preço do produto -->
+      <input type="number" [(ngModel)]="novoProduto.preco" name="preco" placeholder="Preço" required>
+  
+      <!-- Selecione a imagem -->
+      <div class="imagens-container">
+        <img *ngFor="let imagem of imagens" 
+             [src]="'assets/' + imagem" 
+             [alt]="imagem" 
+             (click)="selecionarImagem(imagem)" 
+             [class.selected]="novoProduto.photo === imagem">
+      </div>
+  
+      <!-- Imagem selecionada -->
+      <img *ngIf="novoProduto.photo" [src]="'assets/' + novoProduto.photo" alt="Imagem selecionada" class="selected-image">
+      
+      <!-- Botão de salvar -->
+      <button type="submit" [disabled]="!novoProduto.nome || !novoProduto.descricao || !novoProduto.preco || !novoProduto.photo">
+        Adicionar Produto
+      </button>
+    </form>
+  </div>
+  
